@@ -28,7 +28,7 @@ describe("User Model", function(){
         let userModel = new UserModel();
         let param = {"email": "rurriza@village88.com"};
         let result = await userModel.deleteUser(param);
-        result.should.equal(false);
+        result.should.equal(true);
     });
 
     
