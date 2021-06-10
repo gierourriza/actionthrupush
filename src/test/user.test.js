@@ -11,25 +11,7 @@ describe("User Model", function(){
         expect(result).to.equal(true);
     });
 
-    it("should return true if user exists", async function(){
-        let userModel = new UserModel();
-        let param = {"email": "rurriza@village88.com"};
-        let result = await userModel.getUsers(param);
-        expect(result).to.equal(true);
-    });
-    it("should return false if user does not exists", async function(){
-        let userModel = new UserModel();
-        let param = {"email": "rurriza@village88.comxxx"};
-        let result = await userModel.getUsers(param);
-        result.should.equal(false);
-    });
-
-    it("should return true if user exists and is deleted", async function(){
-        let userModel = new UserModel();
-        let param = {"email": "rurriza@village88.com"};
-        let result = await userModel.deleteUser(param);
-        result.should.equal(true);
-    });
+    
 
     
 })
