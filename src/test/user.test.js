@@ -24,5 +24,12 @@ describe("User Model", function(){
         result.should.equal(false);
     });
 
+    it("should return true if user exists and is deleted", async function(){
+        let userModel = new UserModel();
+        let param = {"email": "rurriza@village88.com"};
+        let result = await userModel.deleteUser(param);
+        result.should.equal(false);
+    });
+
     
 })
